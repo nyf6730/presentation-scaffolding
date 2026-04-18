@@ -799,6 +799,49 @@ h3{font-size:clamp(1rem,1.35vw,1.25rem)!important;color:rgba(255,255,255,0.78)!i
   <p class="sub" style="margin-top:1vh; font-size:clamp(1rem,1.4vw,1.2rem);">반도체 &middot; 데이터센터 &middot; 클라우드 &middot; 모델 &middot; 애플리케이션 &mdash; 이 중 <span class="em">어디에 먼저 압력이 쌓이는지</span>가 핵심</p>
 </div>
 
+<!-- 반도체 레이어 드릴다운: 메모리 / 스토리지 구성 -->
+<div class="slide surface">
+  <h3>메모리 &middot; 스토리지 &mdash; AI 서버의 주요 구성 요소</h3>
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:18px;width:100%;max-width:980px;margin-top:2vh;">
+    <!-- HBM -->
+    <div style="padding:2.8vh 2.2vw;border-left:3px solid #fca5a5;background:rgba(252,165,165,0.04);border-radius:4px;">
+      <div style="display:flex;align-items:baseline;gap:10px;margin-bottom:10px;">
+        <span style="font-size:1.45rem;font-weight:800;color:#fff;">HBM</span>
+        <span style="font-size:0.78rem;color:rgba(255,255,255,0.6);text-transform:uppercase;letter-spacing:0.1em;">High Bandwidth Memory</span>
+      </div>
+      <p style="font-size:clamp(1.15rem,1.4vw,1.32rem);color:rgba(255,255,255,0.92);line-height:1.6;margin:0;">GPU 위에 직접 적층, AI 연산 속도의 <strong style="color:#fff;">최대 병목</strong></p>
+      <div style="margin-top:12px;font-size:0.85rem;padding:5px 12px;border-radius:4px;background:rgba(252,165,165,0.12);color:#fca5a5;display:inline-block;">웨이퍼 소모 일반 DRAM의 3~4배</div>
+    </div>
+    <!-- DDR5 -->
+    <div style="padding:2.8vh 2.2vw;border-left:3px solid #60a5fa;background:rgba(96,165,250,0.04);border-radius:4px;">
+      <div style="display:flex;align-items:baseline;gap:10px;margin-bottom:10px;">
+        <span style="font-size:1.45rem;font-weight:800;color:#fff;">DDR5</span>
+        <span style="font-size:0.78rem;color:rgba(255,255,255,0.6);text-transform:uppercase;letter-spacing:0.1em;">범용 DRAM</span>
+      </div>
+      <p style="font-size:clamp(1.15rem,1.4vw,1.32rem);color:rgba(255,255,255,0.92);line-height:1.6;margin:0;">CPU 시스템 메모리, 에이전트 세션 &middot; <strong style="color:#fff;">KV-cache 오프로드</strong></p>
+      <div style="margin-top:12px;font-size:0.85rem;padding:5px 12px;border-radius:4px;background:rgba(96,165,250,0.12);color:#60a5fa;display:inline-block;">AI 서버·에이전트 상시화로 수요 급증</div>
+    </div>
+    <!-- NAND -->
+    <div style="padding:2.8vh 2.2vw;border-left:3px solid #34d399;background:rgba(52,211,153,0.04);border-radius:4px;">
+      <div style="display:flex;align-items:baseline;gap:10px;margin-bottom:10px;">
+        <span style="font-size:1.45rem;font-weight:800;color:#fff;">NAND &middot; SSD</span>
+        <span style="font-size:0.78rem;color:rgba(255,255,255,0.6);text-transform:uppercase;letter-spacing:0.1em;">비휘발성 스토리지</span>
+      </div>
+      <p style="font-size:clamp(1.15rem,1.4vw,1.32rem);color:rgba(255,255,255,0.92);line-height:1.6;margin:0;">학습 데이터 &middot; 모델 저장, 에이전트 <strong style="color:#fff;">파일 I/O 경유</strong></p>
+      <div style="margin-top:12px;font-size:0.85rem;padding:5px 12px;border-radius:4px;background:rgba(52,211,153,0.12);color:#34d399;display:inline-block;">학습 데이터·생성물 저장 수요 확대</div>
+    </div>
+    <!-- DDR4 -->
+    <div style="padding:2.8vh 2.2vw;border-left:3px solid rgba(255,255,255,0.35);background:rgba(255,255,255,0.02);border-radius:4px;">
+      <div style="display:flex;align-items:baseline;gap:10px;margin-bottom:10px;">
+        <span style="font-size:1.45rem;font-weight:800;color:#fff;">DDR4</span>
+        <span style="font-size:0.78rem;color:rgba(255,255,255,0.6);text-transform:uppercase;letter-spacing:0.1em;">레거시 DRAM</span>
+      </div>
+      <p style="font-size:clamp(1.15rem,1.4vw,1.32rem);color:rgba(255,255,255,0.92);line-height:1.6;margin:0;">레거시 서버 &middot; 산업용, HBM 확대로 <strong style="color:#fff;">공급 감소 &rarr; 동반 상승</strong></p>
+      <div style="margin-top:12px;font-size:0.85rem;padding:5px 12px;border-radius:4px;background:rgba(255,255,255,0.06);color:rgba(255,255,255,0.7);display:inline-block;">일부 규격 DDR5보다 비싼 역전 사례</div>
+    </div>
+  </div>
+</div>
+
 <!-- S29 메모리 — 어디가 병목인가 -->
 <div class="slide surface">
   <h3>수요 증가가 가장 먼저 닿는 곳</h3>
@@ -847,29 +890,6 @@ h3{font-size:clamp(1rem,1.35vw,1.25rem)!important;color:rgba(255,255,255,0.78)!i
   </div>
   <p class="sub" style="margin-top:3vh;">에이전트가 늘어날수록 &mdash; <span class="em">추론 연산 &times; 저장 수요 = 메모리 수요</span></p>
 </div>
-<!-- S31 영상 AI가 메모리를 먹는 속도 -->
-<div class="slide in-amber">
-  <h3>영상 AI가 메모리를 먹는 속도</h3>
-  <div class="comp" style="margin-top:3vh;">
-    <div class="comp-item on" style="border-top-color:rgba(255,255,255,0.18);">
-      <i class="ph-fill ph-text-aa" style="font-size:2.5rem; color:rgba(255,255,255,0.55);"></i>
-      <div class="tag">텍스트 AI</div>
-      <p>학습 데이터: <strong>수십 PB</strong><br>응답: <strong>수 KB</strong></p>
-    </div>
-    <div class="comp-item on" style="border-top-color:rgba(251,191,36,0.55); background:transparent;">
-      <i class="ph-fill ph-film-strip" style="font-size:2.5rem; color:#fbbf24;"></i>
-      <div class="tag" style="color:#fbbf24;">영상 AI</div>
-      <p style="color:rgba(255,255,255,0.95);">학습 데이터: <strong style="color:#fbbf24;">수천 PB</strong><br>생성물: <strong style="color:#fbbf24;">수 GB</strong></p>
-    </div>
-    <div class="comp-item on" style="border-top-color:rgba(252,165,165,0.55); background:transparent;">
-      <i class="ph-fill ph-database" style="font-size:2.5rem; color:#fca5a5;"></i>
-      <div class="tag" style="color:#fca5a5;">저장 수요</div>
-      <p style="color:rgba(255,255,255,0.95);">생성된 영상 저장 + 학습 데이터 캐싱 &rarr; <strong style="color:#fca5a5;">스토리지 급증</strong></p>
-    </div>
-  </div>
-  <p class="sub" style="margin-top:2vh;">Seedance 하나가 만드는 영상 = <span class="em">텍스트 답변 수만 개 분량</span>의 스토리지</p>
-</div>
-
 <!-- S33 구조적 전환 — 일시적 트렌드가 아닌 이유 -->
 <div class="slide surface">
   <h3>구조적 전환 &mdash; 일시적 트렌드가 아닌 이유</h3>
@@ -924,73 +944,11 @@ h3{font-size:clamp(1rem,1.35vw,1.25rem)!important;color:rgba(255,255,255,0.78)!i
 
 <!-- Larry Page 인용 임팩트 슬라이드 -->
 <div class="slide in-amber">
-  <blockquote style="max-width:960px;">"<span class="em">이 경쟁에서 지느니</span> 파산하는 게 낫다"</blockquote>
-  <cite>&mdash; Larry Page, Alphabet 공동 창업자 (언론 보도 정리)</cite>
-  <p class="sub" style="margin-top:4vh; font-size:clamp(1.1rem,1.4vw,1.3rem); color:rgba(255,255,255,0.75);">AI 레이스의 투자 사이즈를 이해하는 또 하나의 앵커</p>
+  <blockquote style="max-width:1040px; font-size:clamp(2.3rem,3.8vw,3.3rem); font-weight:400; color:#fff; line-height:1.3; letter-spacing:-0.015em;">"<span class="em" style="color:#fca5a5 !important;">이 경쟁에서 지느니</span> 파산하는 게 낫다"</blockquote>
+  <cite style="font-size:clamp(1.05rem,1.3vw,1.25rem); color:rgba(255,255,255,0.72); margin-top:2vh;">&mdash; Larry Page, Alphabet 공동 창업자 (언론 보도 정리)</cite>
+  <p class="sub" style="margin-top:4vh; font-size:clamp(1.1rem,1.4vw,1.3rem); color:rgba(255,255,255,0.85);">AI 레이스의 투자 사이즈를 이해하는 또 하나의 앵커</p>
 </div>
 
-<!-- V2: Tier 5 메모리 상세 — HBM / DDR5 / NAND / DDR4 -->
-<div class="slide surface">
-  <h3>메모리 &middot; 스토리지 &mdash; AI 서버의 주요 구성 요소</h3>
-  <div style="display:grid;grid-template-columns:1fr 1fr;gap:18px;width:100%;max-width:980px;margin-top:2vh;">
-    <!-- HBM -->
-    <div style="padding:2.8vh 2.2vw;border-left:3px solid #fca5a5;background:rgba(252,165,165,0.04);border-radius:4px;">
-      <div style="display:flex;align-items:baseline;gap:10px;margin-bottom:10px;">
-        <span style="font-size:1.45rem;font-weight:800;color:#fff;">HBM</span>
-        <span style="font-size:0.78rem;color:rgba(255,255,255,0.6);text-transform:uppercase;letter-spacing:0.1em;">High Bandwidth Memory</span>
-      </div>
-      <p style="font-size:clamp(1.15rem,1.4vw,1.32rem);color:rgba(255,255,255,0.92);line-height:1.6;margin:0;">GPU 위에 직접 적층, AI 연산 속도의 <strong style="color:#fff;">최대 병목</strong></p>
-      <div style="margin-top:12px;font-size:0.85rem;padding:5px 12px;border-radius:4px;background:rgba(252,165,165,0.12);color:#fca5a5;display:inline-block;">웨이퍼 소모 일반 DRAM의 3~4배</div>
-    </div>
-    <!-- DDR5 -->
-    <div style="padding:2.8vh 2.2vw;border-left:3px solid #60a5fa;background:rgba(96,165,250,0.04);border-radius:4px;">
-      <div style="display:flex;align-items:baseline;gap:10px;margin-bottom:10px;">
-        <span style="font-size:1.45rem;font-weight:800;color:#fff;">DDR5</span>
-        <span style="font-size:0.78rem;color:rgba(255,255,255,0.6);text-transform:uppercase;letter-spacing:0.1em;">범용 DRAM</span>
-      </div>
-      <p style="font-size:clamp(1.15rem,1.4vw,1.32rem);color:rgba(255,255,255,0.92);line-height:1.6;margin:0;">CPU 시스템 메모리, 에이전트 세션 &middot; <strong style="color:#fff;">KV-cache 오프로드</strong></p>
-      <div style="margin-top:12px;font-size:0.85rem;padding:5px 12px;border-radius:4px;background:rgba(96,165,250,0.12);color:#60a5fa;display:inline-block;">AI 서버·에이전트 상시화로 수요 급증</div>
-    </div>
-    <!-- NAND -->
-    <div style="padding:2.8vh 2.2vw;border-left:3px solid #34d399;background:rgba(52,211,153,0.04);border-radius:4px;">
-      <div style="display:flex;align-items:baseline;gap:10px;margin-bottom:10px;">
-        <span style="font-size:1.45rem;font-weight:800;color:#fff;">NAND &middot; SSD</span>
-        <span style="font-size:0.78rem;color:rgba(255,255,255,0.6);text-transform:uppercase;letter-spacing:0.1em;">비휘발성 스토리지</span>
-      </div>
-      <p style="font-size:clamp(1.15rem,1.4vw,1.32rem);color:rgba(255,255,255,0.92);line-height:1.6;margin:0;">학습 데이터 &middot; 모델 저장, 에이전트 <strong style="color:#fff;">파일 I/O 경유</strong></p>
-      <div style="margin-top:12px;font-size:0.85rem;padding:5px 12px;border-radius:4px;background:rgba(52,211,153,0.12);color:#34d399;display:inline-block;">학습 데이터·생성물 저장 수요 확대</div>
-    </div>
-    <!-- DDR4 -->
-    <div style="padding:2.8vh 2.2vw;border-left:3px solid rgba(255,255,255,0.35);background:rgba(255,255,255,0.02);border-radius:4px;">
-      <div style="display:flex;align-items:baseline;gap:10px;margin-bottom:10px;">
-        <span style="font-size:1.45rem;font-weight:800;color:#fff;">DDR4</span>
-        <span style="font-size:0.78rem;color:rgba(255,255,255,0.6);text-transform:uppercase;letter-spacing:0.1em;">레거시 DRAM</span>
-      </div>
-      <p style="font-size:clamp(1.15rem,1.4vw,1.32rem);color:rgba(255,255,255,0.92);line-height:1.6;margin:0;">레거시 서버 &middot; 산업용, HBM 확대로 <strong style="color:#fff;">공급 감소 &rarr; 동반 상승</strong></p>
-      <div style="margin-top:12px;font-size:0.85rem;padding:5px 12px;border-radius:4px;background:rgba(255,255,255,0.06);color:rgba(255,255,255,0.7);display:inline-block;">일부 규격 DDR5보다 비싼 역전 사례</div>
-    </div>
-  </div>
-</div>
-
-<!-- V2: 가격 동조화 — 공급·수요 구조 -->
-<div class="slide in-amber">
-  <h3>공급·수요 구조</h3>
-  <div class="comp" style="margin-top:3vh;">
-    <div class="comp-item on" style="padding:3vh 2vw;">
-      <div class="tag" style="color:#fca5a5;">공급 측</div>
-      <p>같은 웨이퍼 라인 공유<br>HBM 확대 &rarr; <strong>범용 DRAM·NAND 캐파 경쟁</strong></p>
-    </div>
-    <div class="comp-item on" style="padding:3vh 2vw;">
-      <div class="tag" style="color:#60a5fa;">수요 측</div>
-      <p>에이전트 전환으로<br>토큰 소모 <strong>수 배~수십 배</strong><br>같은 사용자 수여도 인프라 소모 폭증</p>
-    </div>
-    <div class="comp-item on" style="padding:3vh 2vw;">
-      <div class="tag" style="color:#fbbf24;">결과</div>
-      <p>HBM &middot; DDR5 &middot; NAND<br><strong style="color:#fbbf24;">동반 상승</strong><br>리드타임 장기화</p>
-    </div>
-  </div>
-  <p class="sub" style="margin-top:2vh;">GPU 수요가 커질수록 <span class="em">메모리 수요도 함께</span> 따라가는 구조</p>
-</div>
 
 <!-- ══ SECTION 06: 역할의 변화 (34-41) ══ -->
 
@@ -1084,7 +1042,7 @@ h3{font-size:clamp(1rem,1.35vw,1.25rem)!important;color:rgba(255,255,255,0.78)!i
     </div>
     <div class="comp-item red-on">
       <i class="ph-fill ph-warning-octagon" style="font-size:3rem; color:#fca5a5; margin-bottom:6px;"></i>
-      <div class="tag" style="color:rgba(252,165,165,0.85); font-size:0.95rem;">정리되지 않은 조직</div>
+      <div class="tag" style="color:rgba(252,165,165,0.85); font-size:0.95rem;">프로세스가 정립되지 않은 조직</div>
       <p style="color:#fca5a5; font-size:clamp(1.6rem,2.4vw,2.1rem); line-height:1.25; font-weight:400;">문제 <strong style="font-weight:900;">악화</strong></p>
     </div>
   </div>
@@ -1264,7 +1222,7 @@ h3{font-size:clamp(1rem,1.35vw,1.25rem)!important;color:rgba(255,255,255,0.78)!i
 
 <!-- 제약 속에서도 이미 움직이고 있는 지점 -->
 <div class="slide in-teal">
-  <h3>S/W 개발팀의 선행 움직임</h3>
+  <h3>전사적으로 AI 도구 활용을 위한 준비중</h3>
   <div class="comp" style="margin-top:3vh;">
     <div class="comp-item on" style="border-top:3px solid rgba(129,140,248,0.55);">
       <div class="tag" style="color:#818cf8;">전사 AI 활용 의지</div>
@@ -1338,7 +1296,7 @@ h3{font-size:clamp(1rem,1.35vw,1.25rem)!important;color:rgba(255,255,255,0.78)!i
     <div style="border:1px solid rgba(251,191,36,0.22); border-top:3px solid rgba(251,191,36,0.55); border-radius:4px; padding:24px 22px;">
       <i class="ph-fill ph-compass" style="font-size:1.8rem; color:#fbbf24; margin-bottom:10px;"></i>
       <div style="color:#fbbf24; font-size:0.82rem; font-weight:700; letter-spacing:0.08em; margin-bottom:6px;">준비</div>
-      <p style="color:rgba(255,255,255,0.92); font-size:clamp(1.15rem,1.4vw,1.3rem); line-height:1.55;">우리 팀은 무엇을 준비해야 하는가?</p>
+      <p style="color:rgba(255,255,255,0.92); font-size:clamp(1.15rem,1.4vw,1.3rem); line-height:1.55;">우리는 무엇을 준비해야 하는가?</p>
     </div>
     <div style="border:1px solid rgba(252,165,165,0.22); border-top:3px solid rgba(252,165,165,0.55); border-radius:4px; padding:24px 22px;">
       <i class="ph-fill ph-share-network" style="font-size:1.8rem; color:#fca5a5; margin-bottom:10px;"></i>
@@ -1351,25 +1309,29 @@ h3{font-size:clamp(1rem,1.35vw,1.25rem)!important;color:rgba(255,255,255,0.78)!i
 <!-- S48 추천 도구와 리소스 -->
 <div class="slide in-teal">
   <h3>추천 도구와 리소스</h3>
-  <div class="grid" style="margin-top:3vh;">
-    <div class="grid-item" style="border-top:3px solid rgba(52,211,153,0.55);">
-      <div class="name" style="color:#34d399;">ChatGPT</div>
-      <div class="desc">범용 AI 대화<br>가장 넓은 사용층</div>
+  <div class="grid" style="margin-top:3vh; max-width:1400px;">
+    <div class="grid-item" style="border-top:3px solid rgba(96,165,250,0.55); padding:3vh 1.3vw;">
+      <div class="name" style="color:#60a5fa; white-space:nowrap;">Antigravity</div>
+      <div class="desc">Google AI 에이전트 IDE<br>웹 &middot; 코드 작업 자동화</div>
     </div>
-    <div class="grid-item" style="border-top:3px solid rgba(251,191,36,0.55);">
-      <div class="name" style="color:#fbbf24;">Claude</div>
-      <div class="desc">긴 문서 분석<br>보고서 작성에 강점</div>
+    <div class="grid-item" style="border-top:3px solid rgba(251,191,36,0.55); padding:3vh 1.3vw;">
+      <div class="name" style="color:#fbbf24; white-space:nowrap;">Claude Code</div>
+      <div class="desc">Anthropic 공식 CLI<br>파일 조작 &middot; 실행까지</div>
     </div>
-    <div class="grid-item" style="border-top:3px solid rgba(96,165,250,0.55);">
-      <div class="name" style="color:#60a5fa;">NotebookLM</div>
-      <div class="desc">문서 기반 Q&amp;A<br>Google 제공 무료</div>
+    <div class="grid-item" style="border-top:3px solid rgba(252,165,165,0.55); padding:3vh 1.3vw;">
+      <div class="name" style="color:#fca5a5; white-space:nowrap;">Claude Cowork</div>
+      <div class="desc">팀 협업 워크스페이스<br>문서 &middot; 대화 컨텍스트 공유</div>
     </div>
-    <div class="grid-item" style="border-top:3px solid rgba(167,139,250,0.55);">
-      <div class="name" style="color:#a78bfa;">Gamma</div>
-      <div class="desc">프레젠테이션<br>자동 생성</div>
+    <div class="grid-item" style="border-top:3px solid rgba(52,211,153,0.55); padding:3vh 1.3vw;">
+      <div class="name" style="color:#34d399; white-space:nowrap;">NotebookLM</div>
+      <div class="desc">문서 기반 Q&amp;A<br>요약 &middot; 팟캐스트 자동 생성</div>
+    </div>
+    <div class="grid-item" style="border-top:3px solid rgba(167,139,250,0.55); padding:3vh 1.3vw;">
+      <div class="name" style="color:#a78bfa; white-space:nowrap;">Figma</div>
+      <div class="desc">디자인 협업<br>Figma AI 기능 탑재</div>
     </div>
   </div>
-  <p class="sub" style="margin-top:2vh;">대부분 <span class="em">무료 요금제에서 기본 체험</span> 가능 (툴별 조건 상이)</p>
+  <p class="sub" style="margin-top:2vh;">각 툴마다 무료 체험 또는 유료 구독이 필요 &mdash; <span class="em">환경에 맞게 선별 체험</span></p>
 </div>
 
 <!-- ══ CLOSING (49-52) ══ -->
