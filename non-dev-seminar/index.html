@@ -49,7 +49,7 @@ cite{display:block;margin-top:24px;font-size:0.78rem;color:rgba(255,255,255,0.55
 .note.warn{border-left:2px solid rgba(255,255,255,0.2);background:transparent}.note.warn p{color:rgba(255,255,255,0.55);font-size:clamp(0.9rem,1.1vw,1.05rem);font-weight:300}
 .note.tip{border-left:2px solid rgba(96,165,250,0.4);background:transparent}.note.tip p{color:rgba(255,255,255,0.55);font-size:clamp(0.9rem,1.1vw,1.05rem);font-weight:300}
 .pipeline{display:flex;align-items:center;gap:0;margin:3vh 0;flex-wrap:nowrap}
-.pipeline-step{padding:1.4vh 2.4vw;font-size:clamp(0.85rem,1.1vw,1rem);font-weight:300;text-align:center;color:rgba(255,255,255,0.5);white-space:nowrap}
+.pipeline-step{padding:1.8vh 2.6vw;font-size:clamp(1.1rem,1.5vw,1.4rem);font-weight:300;text-align:center;color:rgba(255,255,255,0.5);white-space:nowrap;line-height:1.5}
 .pipeline-step.on{color:#fff;font-weight:700}
 .pipeline-arrow{color:rgba(255,255,255,0.3);font-size:1rem;padding:0 4px}
 .tbl{margin-top:2vh;border-collapse:collapse;max-width:82vw}
@@ -109,7 +109,7 @@ cite{font-size:0.88rem!important;color:rgba(255,255,255,0.82)!important}
 .sub{color:rgba(255,255,255,0.93)!important}
 .note.warn p,.note.tip p{font-size:clamp(0.98rem,1.2vw,1.12rem)!important;color:rgba(255,255,255,0.92)!important}
 .list li{font-size:clamp(1.2rem,1.8vw,1.55rem)!important;color:rgba(255,255,255,0.95)!important}
-.pipeline-step{font-size:clamp(0.95rem,1.2vw,1.1rem)!important;color:rgba(255,255,255,0.88)!important}
+.pipeline-step{font-size:clamp(1.2rem,1.6vw,1.5rem)!important;color:rgba(255,255,255,0.88)!important}
 /* 인라인 낮은 opacity 회색 일괄 상향 */
 [style*="rgba(255,255,255,0.25)"]{color:rgba(255,255,255,0.8)!important}
 [style*="rgba(255,255,255,0.3)"]{color:rgba(255,255,255,0.82)!important}
@@ -305,7 +305,7 @@ h3{font-size:clamp(1rem,1.35vw,1.25rem)!important;color:rgba(255,255,255,0.78)!i
 <div class="slide in-rose">
   <blockquote>"자연어가 새로운 프로그래밍 언어가 되고 있고, <span class="em">더 많은 사람이</span> 기계와 직접 대화한다"</blockquote>
   <cite>&mdash; Jensen Huang, NVIDIA CEO</cite>
-  <p class="sub" style="margin-top:4vh;">한국어로 지시할 수 있으면, 컴퓨터를 부릴 수 있는 시대</p>
+  <p class="sub" style="margin-top:4vh;">자연어가 곧 명령어 &mdash; 누구나 <span class="em">컴퓨터를 부리는</span> 시대</p>
 </div>
 
 <!-- ══ SECTION 02: 업계 기준선 (10-15) ══ -->
@@ -399,16 +399,16 @@ h3{font-size:clamp(1rem,1.35vw,1.25rem)!important;color:rgba(255,255,255,0.78)!i
   <h3>2026.4 Anthropic &mdash; 10일 사이</h3>
   <div style="display:flex; gap:24px; margin-top:5vh; width:100%; max-width:1200px; align-items:stretch;">
     <div class="comp-item on" style="flex:1; border-top:4px solid rgba(252,165,165,0.6); padding:6vh 2.4vw;">
-      <div class="tag" style="color:#fca5a5; font-size:1.2rem; letter-spacing:0.2em; margin-bottom:1.5vh;">4.7</div>
-      <p style="font-size:clamp(1.7rem,2.4vw,2.3rem); line-height:1.35;"><strong style="color:#fca5a5;">Mythos Preview</strong><br><span style="font-size:clamp(1.05rem,1.3vw,1.25rem); color:rgba(255,255,255,0.72); font-weight:400;">비공개 프론티어</span></p>
+      <div class="tag" style="color:#fca5a5 !important; font-size:1.2rem !important; letter-spacing:0.2em; margin-bottom:1.5vh;">4.7</div>
+      <p style="font-size:clamp(1.7rem,2.4vw,2.3rem) !important; line-height:1.35 !important;"><strong style="color:#fca5a5;">Mythos Preview</strong><br><span style="font-size:clamp(1.05rem,1.3vw,1.25rem); color:rgba(255,255,255,0.72); font-weight:400;">비공개 프론티어</span></p>
     </div>
     <div class="comp-item on" style="flex:1; border-top:4px solid rgba(52,211,153,0.6); padding:6vh 2.4vw;">
-      <div class="tag" style="color:#34d399; font-size:1.2rem; letter-spacing:0.2em; margin-bottom:1.5vh;">4.16</div>
-      <p style="font-size:clamp(1.7rem,2.4vw,2.3rem); line-height:1.35;"><strong style="color:#34d399;">Opus 4.7</strong> 공개<br><span style="font-size:clamp(1.05rem,1.3vw,1.25rem); color:rgba(255,255,255,0.72); font-weight:400;">&ldquo;Mythos엔 못 미친다&rdquo;</span></p>
+      <div class="tag" style="color:#34d399 !important; font-size:1.2rem !important; letter-spacing:0.2em; margin-bottom:1.5vh;">4.16</div>
+      <p style="font-size:clamp(1.7rem,2.4vw,2.3rem) !important; line-height:1.35 !important;"><strong style="color:#34d399;">Opus 4.7</strong> 공개<br><span style="font-size:clamp(1.05rem,1.3vw,1.25rem); color:rgba(255,255,255,0.72); font-weight:400;">&ldquo;Mythos엔 못 미친다&rdquo;</span></p>
     </div>
     <div class="comp-item on" style="flex:1; border-top:4px solid rgba(251,191,36,0.6); padding:6vh 2.4vw;">
-      <div class="tag" style="color:#fbbf24; font-size:1.2rem; letter-spacing:0.2em; margin-bottom:1.5vh;">여진</div>
-      <p style="font-size:clamp(1.7rem,2.4vw,2.3rem); line-height:1.35;"><strong style="color:#fbbf24;">백악관 &middot; CISA</strong><br><span style="font-size:clamp(1.05rem,1.3vw,1.25rem); color:rgba(255,255,255,0.72); font-weight:400;">접근 권한 긴급 협의</span></p>
+      <div class="tag" style="color:#fbbf24 !important; font-size:1.2rem !important; letter-spacing:0.2em; margin-bottom:1.5vh;">여진</div>
+      <p style="font-size:clamp(1.7rem,2.4vw,2.3rem) !important; line-height:1.35 !important;"><strong style="color:#fbbf24;">백악관 &middot; CISA</strong><br><span style="font-size:clamp(1.05rem,1.3vw,1.25rem); color:rgba(255,255,255,0.72); font-weight:400;">접근 권한 긴급 협의</span></p>
     </div>
   </div>
   <p class="sub" style="margin-top:5vh;">공개 모델이 아니라 <span class="em">비공개 프론티어</span>가 업계 최전선</p>
@@ -645,7 +645,7 @@ h3{font-size:clamp(1rem,1.35vw,1.25rem)!important;color:rgba(255,255,255,0.78)!i
   <div style="display:flex; gap:18px; margin-top:2vh; width:100%; max-width:1320px; align-items:stretch;">
     <div style="flex:1; display:flex; flex-direction:column; gap:8px;">
       <div style="aspect-ratio:16/9; background:#0D0D0D; border:1px solid rgba(255,255,255,0.08); border-radius:4px; overflow:hidden;">
-        <video controls preload="metadata" style="width:100%; height:100%; object-fit:contain;">
+        <video controls preload="none" style="width:100%; height:100%; object-fit:contain;">
           <source src="../assets/videos/swdp.next_영상.mp4" type="video/mp4">
         </video>
       </div>
@@ -653,7 +653,7 @@ h3{font-size:clamp(1rem,1.35vw,1.25rem)!important;color:rgba(255,255,255,0.78)!i
     </div>
     <div style="flex:1; display:flex; flex-direction:column; gap:8px;">
       <div style="aspect-ratio:16/9; background:#0D0D0D; border:1px solid rgba(255,255,255,0.08); border-radius:4px; overflow:hidden;">
-        <video controls preload="metadata" style="width:100%; height:100%; object-fit:contain;">
+        <video controls preload="none" style="width:100%; height:100%; object-fit:contain;">
           <source src="../assets/videos/claude-design-demo.mp4" type="video/mp4">
         </video>
       </div>
@@ -1440,10 +1440,10 @@ const partMap=[
 {from:8,to:13,label:'Section 02 \u00b7 \uc5c5\uacc4 \uae30\uc900\uc120'},
 {from:14,to:22,label:'Section 03 \u00b7 \uac19\uc740 AI, \ub2e4\ub978 \uacb0\uacfc'},
 {from:23,to:30,label:'Section 04 \u00b7 \ucf54\ub529\uc744 \ub118\uc5b4'},
-{from:31,to:40,label:'Section 05 \u00b7 AI \uc778\ud504\ub77c\uc758 \ubcd1\ubaa9'},
-{from:41,to:50,label:'Section 06 \u00b7 \uc5ed\ud560\uc758 \ubcc0\ud654'},
-{from:51,to:58,label:'Section 07 \u00b7 \ud604\uc2e4 \uc81c\uc57d\uacfc \uc2e4\ucc9c'},
-{from:59,to:60,label:'Closing'}
+{from:31,to:38,label:'Section 05 \u00b7 AI \uc778\ud504\ub77c\uc758 \ubcd1\ubaa9'},
+{from:39,to:48,label:'Section 06 \u00b7 \uc5ed\ud560\uc758 \ubcc0\ud654'},
+{from:49,to:55,label:'Section 07 \u00b7 \ud604\uc2e4 \uc81c\uc57d\uacfc \uc2e4\ucc9c'},
+{from:56,to:59,label:'Closing'}
 ];
 function getPartLabel(idx){for(const p of partMap){if(idx>=p.from&&idx<=p.to)return p.label;}return 'AI \uc138\ubbf8\ub098';}
 function update(){if(!pageNumEl||!progressEl)return;pageNumEl.textContent=`${current+1} / ${total}`;progressEl.style.width=total>1?`${(current/(total-1))*100}%`:'100%';if(partLabelEl)partLabelEl.textContent=getPartLabel(current);}
